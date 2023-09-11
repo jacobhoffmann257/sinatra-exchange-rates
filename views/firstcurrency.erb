@@ -1,7 +1,7 @@
-<h1>Currency pairs
+<h1>Currency pairs</h1>
 <ul><% @code_list.each do |x| 
 %>
-<li><a href= "/#{<%= x.to_s %>}"><%= x.to_s %>
+<li><a href= "/<%=x.to_s %>"><%= x.to_s %>
 </a></li>
 <%
 
