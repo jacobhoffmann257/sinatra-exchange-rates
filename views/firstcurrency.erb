@@ -1,4 +1,11 @@
 <h1>Currency pairs
-<ul><%= @symbols_array.each do |x| %>
-  <li>x.to_s</li>
+<ul><% @code_list.each do |x| 
+%>
+<li><a href= "/#{<%= x.to_s %>}"><%= x.to_s %>
+</a></li>
+<%
+
+end
+%>
+
 </ul>

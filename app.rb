@@ -11,6 +11,9 @@ get("/") do
   symbols_list.each do |x,y|
   @symbols_array.push(y)
   end
-  puts @symbols_array
+  @code_list = []
+  @symbols_array.each do |x,y|
+  @code_list.push( x.fetch("code"))
+  end
   erb(:firstcurrency)
 end
