@@ -34,5 +34,15 @@ get("/:code") do
 erb(:secondcurrency)
 end
 get("/:code1/:code2") do
+  code1 = params.fetch("code1")
+  @code1http = code1
+  code2 = params.fetch("code2")
+  @code2http = code2
+  converturl = "https://api.exchangerate.host/convert?from=#{code1}&to=#{code2}"
+  rawconvert = HTTP.get(converturl)
+  parsed_convert = JSON.parse(rawconvert)
+  conversioninfo = parsed_convert.fetch("info")
+  @rate = conversioninfo.fetch("rate")
+  puts @rate
   erb(:conversion)
 end
