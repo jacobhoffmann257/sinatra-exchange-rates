@@ -1,8 +1,8 @@
-<h1>Currency pairs 2</h1>
+<h1>Convert <%=  @code1 %></h1>
 <p>Go <a href= "/"> back</a></p>
 <ul><% @code_list.each do |x| 
 %>
-<li><a href= "/<%= @code1.to_s %>/<%=x.to_s %>"><%= x.to_s %>
+<li><a href= "/<%= @code1.to_s %>/<%=x.to_s %>">Convert 1 <%= @code1 %> to <%= x.to_s %>...
 </a></li>
 <%
 
